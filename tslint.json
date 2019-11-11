@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "@mlz/lint/tslint.json"
+  ],
+  "rules": {
+    "no-default-export": false,
+    "no-console": false,
+    "prefer-for-of": false
+  },
+  "linterOptions": {
+    "exclude": ["./rollup.config.js"]
+  }
+}
