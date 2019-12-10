@@ -125,7 +125,7 @@ function createStore(config: CreateStoreConfig) {
 }
 
 // 提供一个创建多个store的API
-createStore.createStores = (configs: CreateStoreConfig[]) => {
+createStore.init = (configs: CreateStoreConfig[]) => {
   configs.forEach((config: CreateStoreConfig) => {
     createStore(config)
   })

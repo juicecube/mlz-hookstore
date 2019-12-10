@@ -4,7 +4,7 @@ import Counter from './components/Counter';
 import { storeConfigs } from './store/index';
 import { createStore, getStore } from '../src/index';
 import 'antd/dist/antd.css';
-createStore.createStores(storeConfigs);
+createStore.init(storeConfigs);
 createStore.isLogger();
 
 console.log('store is', getStore());
