@@ -1,10 +1,14 @@
-import stores from './stores';
+import stores from './stores'
 
-function getStore(namespace:string) {
-  if (!stores[namespace]) {
-    throw new Error(`Not found the store: ${namespace}.`);
+function getStore(namespace?: string) {
+  if (namespace) {
+    if (!stores[namespace]) {
+      throw new Error(`Not found the store: ${namespace}.`)
+    }
+    return stores[namespace]
+  } else {
+    return stores
   }
-  return stores[namespace];
 }
 
-export default getStore;
+export default getStore
